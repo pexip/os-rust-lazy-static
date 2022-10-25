@@ -1,0 +1,43 @@
+Source: rust-lazy-static
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Paride Legovini <paride@debian.org>,
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/lazy-static]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/lazy-static
+X-Cargo-Crate: lazy_static
+Rules-Requires-Root: no
+
+Package: librust-lazy-static-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-spin-0.9+default-dev
+Provides:
+ librust-lazy-static+default-dev (= ${binary:Version}),
+ librust-lazy-static+spin-dev (= ${binary:Version}),
+ librust-lazy-static+spin-no-std-dev (= ${binary:Version}),
+ librust-lazy-static-1-dev (= ${binary:Version}),
+ librust-lazy-static-1+default-dev (= ${binary:Version}),
+ librust-lazy-static-1+spin-dev (= ${binary:Version}),
+ librust-lazy-static-1+spin-no-std-dev (= ${binary:Version}),
+ librust-lazy-static-1.4-dev (= ${binary:Version}),
+ librust-lazy-static-1.4+default-dev (= ${binary:Version}),
+ librust-lazy-static-1.4+spin-dev (= ${binary:Version}),
+ librust-lazy-static-1.4+spin-no-std-dev (= ${binary:Version}),
+ librust-lazy-static-1.4.0-dev (= ${binary:Version}),
+ librust-lazy-static-1.4.0+default-dev (= ${binary:Version}),
+ librust-lazy-static-1.4.0+spin-dev (= ${binary:Version}),
+ librust-lazy-static-1.4.0+spin-no-std-dev (= ${binary:Version})
+Description: Macro for declaring lazily evaluated statics - Rust source code
+ This package contains the source for the Rust lazy_static crate, packaged by
+ debcargo for use with cargo and dh-cargo.
