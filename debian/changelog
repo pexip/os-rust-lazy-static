@@ -1,3 +1,9 @@
+rust-lazy-static (1.4.0-2+pexip24u1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- Huw Jones <huw@pexip.com>  Thu, 11 Jul 2024 11:18:28 +0100
+
 rust-lazy-static (1.4.0-2) unstable; urgency=medium
 
   * Team upload.
